@@ -96,7 +96,7 @@ const AsyncChart = ({ url, onExpand }: { url: string, onExpand: (html: string) =
   );
 };
 
-const API_URL = 'https://aiagent-9816974896.asia-southeast1.run.app';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://aiagent-9816974896.asia-southeast1.run.app';
 const USER_ID = 'default_user';
 
 export default function ChatWidget() {
