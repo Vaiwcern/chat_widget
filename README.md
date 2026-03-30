@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Chat Widget - shadcn/ui + Tailwind CSS
 
-## Getting Started
+Một ứng dụng chat widget hiện đại được xây dựng với **Next.js**, **shadcn/ui** và **Tailwind CSS**.
 
-First, run the development server:
+## 🎯 Tính năng
+
+- 💬 Giao diện chat đẹp mắt với theme tối
+- 📱 Responsive design - hoạt động trên mọi thiết bị
+- ✨ Hiệu ứng động mượt mà
+- 🎨 Được thiết kế với shadcn/ui components
+- ⌨️ Hỗ trợ gửi tin nhắn bằng Enter
+- 🤖 Giả lập phản hồi từ bot (có thể kết nối với API thực)
+
+## 🚀 Bắt đầu
+
+### Cài đặt
+
+```bash
+npm install
+```
+
+### Chạy ứng dụng
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Mở [http://localhost:3000](http://localhost:3000) trong trình duyệt.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build cho production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## 📁 Cấu trúc dự án
 
-To learn more about Next.js, take a look at the following resources:
+```
+chat_widget/
+├── src/
+│   ├── app/
+│   │   ├── globals.css       # Tailwind CSS globals
+│   │   ├── layout.tsx        # Root layout
+│   │   └── page.tsx          # Trang chính
+│   ├── components/
+│   │   ├── ChatWidget.tsx    # Component chat chính
+│   │   └── ui/               # shadcn/ui components
+│   │       ├── button.tsx
+│   │       ├── input.tsx
+│   │       ├── card.tsx
+│   │       ├── avatar.tsx
+│   │       ├── badge.tsx
+│   │       └── scroll-area.tsx
+│   └── lib/
+│       └── utils.ts          # Utility functions
+├── components.json           # shadcn/ui config
+├── tailwind.config.ts        # Tailwind CSS config
+└── package.json
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Công nghệ sử dụng
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Next.js 15** - React framework
+- **TypeScript** - Type-safe development
+- **Tailwind CSS v4** - Utility-first CSS
+- **shadcn/ui** - Reusable React components
+- **Lucide React** - Icon library
 
-## Deploy on Vercel
+## 🎨 Tùy chỉnh
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Thêm components từ shadcn/ui
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npx shadcn@latest add [component-name]
+```
+
+### Sửa đổi giao diện
+
+Chỉnh sửa file `src/components/ChatWidget.tsx` để tùy chỉnh màu sắc, layout, và hành vi.
+
+## 🔌 Kết nối với API
+
+Sửa đổi hàm `handleSendMessage` trong `ChatWidget.tsx` để kết nối với API thực tế.
+
+## 📚 Tài liệu
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [shadcn/ui Documentation](https://ui.shadcn.com)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)

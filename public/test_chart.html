@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Iframe</title>
+</head>
+<body style="background: #222; padding: 20px;">
+    <h2 style="color: white">Chart Iframe Test</h2>
+    <div style="width: 100%; max-width: 800px; background: white; border-radius: 8px; overflow: hidden; min-height: 400px; padding: 10px;">
+        <iframe 
+            src="https://storage.googleapis.com/test" 
+            style="width: 100%; height: 400px; border: none;"
+            sandbox="allow-scripts allow-same-origin allow-popups"
+            id="test-frame"
+        ></iframe>
+    </div>
+
+    <script>
+        // We need a real signed URL to test, but let's test if the iframe blocks anything
+        console.log("Test page loaded");
+    </script>
+</body>
+</html>
